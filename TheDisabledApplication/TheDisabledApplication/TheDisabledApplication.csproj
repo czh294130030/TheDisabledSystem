@@ -203,6 +203,43 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\box_bl.png" />
+    <Content Include="Images\box_br.png" />
+    <Content Include="Images\box_c.png" />
+    <Content Include="Images\box_tl.png" />
+    <Content Include="Images\box_tl_h.png" />
+    <Content Include="Images\box_tr.png" />
+    <Content Include="Images\box_tr_h.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\buttons_left.png" />
+    <Content Include="Images\buttons_right.png" />
+    <Content Include="Images\checkbox.png" />
+    <Content Include="Images\document.png" />
+    <Content Include="Images\dropdown_arrow.png" />
+    <Content Include="Images\dropdown_hr.png" />
+    <Content Include="Images\footer_bg.png" />
+    <Content Include="Images\footer_bl.png" />
+    <Content Include="Images\footer_br.png" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\icons_gray.png" />
+    <Content Include="Images\input_bg.png" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\menu_arrow.png" />
+    <Content Include="Images\menu_tl.png" />
+    <Content Include="Images\menu_tr.png" />
+    <Content Include="Images\messages.png" />
+    <Content Include="Images\module_search.png" />
+    <Content Include="Images\overlay.png" />
+    <Content Include="Images\pagination_button.png" />
+    <Content Include="Images\shelf_center.png" />
+    <Content Include="Images\shelf_left.png" />
+    <Content Include="Images\shelf_right.png" />
+    <Content Include="Images\shelf_sample_image.png" />
+    <Content Include="Images\submenu.png" />
+    <Content Include="Images\submenu_button_bg_left.png" />
+    <Content Include="Images\submenu_button_bg_right.png" />
     <Content Include="Models\TheDisabledClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>TheDisabledClasses.designer.cs</LastGenOutput>
@@ -233,19 +270,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\Site.css" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
