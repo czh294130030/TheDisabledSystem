@@ -59,7 +59,7 @@
       <publishTime>10/03/2014 10:07:18</publishTime>
     </File>
     <File Include="bin/TheDisabledApplication.dll">
-      <publishTime>10/03/2014 16:18:13</publishTime>
+      <publishTime>10/04/2014 11:42:54</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>10/03/2014 10:07:18</publishTime>
@@ -265,6 +265,12 @@
     <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
+    <File Include="CSS/reset.css">
+      <publishTime>10/04/2014 10:37:29</publishTime>
+    </File>
+    <File Include="CSS/style.css">
+      <publishTime>10/04/2014 10:37:29</publishTime>
+    </File>
     <File Include="favicon.ico">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
@@ -274,11 +280,92 @@
     <File Include="Images/accent.png">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
+    <File Include="Images/ajax-loader.gif">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_bl.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_br.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_c.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_tl.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_tl_h.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_tr.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/box_tr_h.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
     <File Include="Images/bullet.png">
-      <publishTime>10/03/2014 10:07:17</publishTime>
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/buttons_left.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/buttons_right.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/checkbox.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/document.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/dropdown_arrow.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/dropdown_hr.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/footer_bg.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/footer_bl.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/footer_br.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
     </File>
     <File Include="Images/heroAccent.png">
       <publishTime>10/03/2014 10:07:17</publishTime>
+    </File>
+    <File Include="Images/icons.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/icons_gray.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/input_bg.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/logo.gif">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/menu.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/menu_arrow.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/menu_tl.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/menu_tr.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/messages.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/module_search.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
     </File>
     <File Include="Images/orderedList0.png">
       <publishTime>10/03/2014 10:07:17</publishTime>
@@ -310,11 +397,44 @@
     <File Include="Images/orderedList9.png">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
+    <File Include="Images/overlay.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/pagination_button.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/shelf_center.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/shelf_left.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/shelf_right.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/shelf_sample_image.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/submenu.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/submenu_button_bg_left.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
+    <File Include="Images/submenu_button_bg_right.png">
+      <publishTime>10/04/2014 10:24:32</publishTime>
+    </File>
     <File Include="Models/TheDisabledClasses.dbml">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>10/03/2014 10:07:17</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/index.js">
+      <publishTime>10/04/2014 11:39:29</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/master.js">
+      <publishTime>10/04/2014 11:41:38</publishTime>
     </File>
     <File Include="Scripts/jquery-1.7.1.js">
       <publishTime>10/03/2014 10:07:17</publishTime>
@@ -352,6 +472,9 @@
     <File Include="Scripts/knockout-2.1.0.js">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
+    <File Include="Scripts/modal.js">
+      <publishTime>10/04/2014 10:35:46</publishTime>
+    </File>
     <File Include="Scripts/modernizr-2.5.3.js">
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
@@ -359,7 +482,7 @@
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
     <File Include="Views/Home/Index.aspx">
-      <publishTime>10/03/2014 10:07:17</publishTime>
+      <publishTime>10/04/2014 11:37:57</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>10/02/2014 23:37:53</publishTime>
@@ -368,7 +491,7 @@
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
     <File Include="Views/Shared/Site.Master">
-      <publishTime>10/03/2014 10:07:17</publishTime>
+      <publishTime>10/04/2014 11:37:38</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>10/03/2014 10:07:17</publishTime>
@@ -380,7 +503,7 @@
       <publishTime>10/03/2014 10:07:17</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/03/2014 11:23:15</publishTime>
+      <publishTime>10/04/2014 11:42:55</publishTime>
     </File>
   </ItemGroup>
 </Project>
