@@ -1,17 +1,17 @@
 ﻿$(function () {
-    $('#a_add').click(function () {
+    $('#a_add').click(function () {//打开添加管理员界面
         dropdown_action('div_add', '33');
         return false;
     });
-    $('#a_edit').click(function () {
+    $('#a_edit').click(function () {//打开编辑管理员界面
         dropdown_action('div_edit', '103');
         return false;
     });
-    $('#a_delete').click(function () {
+    $('#a_delete').click(function () {//打开删除管理员界面
         dropdown_action('div_delete', '176');
         return false;
     });
-    $('#txt_search').keypress(function (e) {
+    $('#txt_search').keypress(function (e) {//在搜索框中按回车触发事件
         if (e.keyCode == '13') {
             search_admin($(this).val());
         }
