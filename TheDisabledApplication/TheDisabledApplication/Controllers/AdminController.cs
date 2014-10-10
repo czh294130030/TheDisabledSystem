@@ -180,5 +180,42 @@ namespace TheDisabledApplication.Controllers
                 return false;
             }
         }
+        /// <summary>
+        ///批量删除管理员信息
+        ///POST /api/Admin/DeleteAdmins
+        ///[{id:14},{id:15}]
+        /// </summary>
+        /// <param name="items">多个管理员信息</param>
+        /// <returns>如果删除成功返回true，失败返回false，如果传入的管理员信息为null获取长度为0返回true</returns>
+        [HttpPost]
+        public bool DeleteAdmins(List<d_admin> items)
+        {
+            if (items == null || items.Count() == 0)
+            {
+                return true;
+            }
+            int[] ids = new int[items.Count()];
+            for(int i=0;i<items.Count();i++)
+            {
+                ids[i] = items[i].id;
+            }
+            try
+            {
+                using (TheDisabledClassesDataContext dc = new TheDisabledClassesDataContext())
+                {
+                    var query = from a in dc.d_admin
+                                where ids.Contains(a.id)
+                                select a;
+                    dc.d_admin.DeleteAllOnSubmit(query);
+                    dc.SubmitChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                BaseMethods.WriteLog(ex.ToString(), "AdminController.DeleteAdmins");
+                return false;
+            }
+        }
     }
 }

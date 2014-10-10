@@ -13,4 +13,12 @@
             }, 300);
         }
     }
+    if (sessionStorage.getItem('user_id') == null) {//判断用户登录，如果没有登录跳转到Login页面
+        window.location.href = '/Home/Login';
+    }
+    $('#a_logout').click(function () {//登出
+        sessionStorage.clear();
+        window.location.href = '/Home/Login';
+        return false;
+    });
 });

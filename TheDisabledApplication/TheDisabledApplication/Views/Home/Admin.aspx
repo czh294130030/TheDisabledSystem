@@ -45,6 +45,7 @@
                     <div class="content">
                         <p>
                             <label>修改管理员</label>
+                            <label id="lbl_edit_id" style="display: none;"></label>
                         </p>
                         <p>
                             <label for="name">用户名:</label>
@@ -73,15 +74,13 @@
             </div>
         </div>
         <div class="title">
-            管理员		
+            管理员
         </div>
         <div class="modules_right">
             <div class="module search">
-                <form action="">
-                    <p>
-                        <input type="text" value="" name="txt_search" id="txt_search" />
-                    </p>
-                </form>
+                <p>
+                    <input type="text" value="" name="txt_search" id="txt_search" />
+                </p>
             </div>
         </div>
     </div>
