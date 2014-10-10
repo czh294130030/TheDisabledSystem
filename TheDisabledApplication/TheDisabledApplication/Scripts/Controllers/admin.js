@@ -9,7 +9,7 @@
             alert('请勾选1个需要修改的管理员!');
             return false;
         }
-        get_admin_by_id($cb_item_checked.attr('id'));
+        admin_get_admin_by_id($cb_item_checked.attr('id'));
         dropdown_action('div_edit', '103');
         return false;
     });
@@ -24,7 +24,7 @@
     });
     $('#txt_search').keypress(function (e) {//在搜索框中按回车触发事件
         if (e.keyCode == '13') {
-            search_admin($(this).val());
+            admin_search_admin($(this).val());
         }
     });
     $('#a_add_close').click(function () {//关闭添加管理员界面
@@ -39,13 +39,13 @@
         var $txt_password = $('#txt_add_password');
         var username = $txt_username.val();
         var password = $txt_password.val();
-        if (!verify_input(username, password, $txt_username, $txt_password)) {
+        if (!admin_verify_input(username, password, $txt_username, $txt_password)) {
             return false;
         }
         admin.username = username;
         admin.password = password;
         admin.typeId = 2;
-        add_admin(admin);
+        admin_add_admin(admin);
         $('#txt_add_username').val('');
         $('#txt_add_password').val('');
         return false;
@@ -68,7 +68,7 @@
             admin.id = $(this).attr('id');
             admins.push(admin);
         });
-        delete_admins(admins);
+        admin_delete_admins(admins);
         return false;
     });
     $('#a_edit_close').click(function () {//关闭修改管理员界面
@@ -84,21 +84,21 @@
         var $txt_password = $('#txt_edit_password');
         var username = $txt_username.val();
         var password = $txt_password.val();
-        if (!verify_input(username, password, $txt_username, $txt_password)) {
+        if (!admin_verify_input(username, password, $txt_username, $txt_password)) {
             return false;
         }
         admin.username = username;
         admin.password = password;
         admin.typeId = 2;
-        edit_admin(id, admin);
+        admin_edit_admin(id, admin);
         return false;
     });
-    search_admin($('#txt_search').val());
+    admin_search_admin($('#txt_search').val());
 });
-check_all = function (cb) {//全选
+admin_check_all = function (cb) {//全选
     $('input.cb_item').attr('checked', cb.checked);
 }
-check_item = function () {//单个选择
+admin_check_item = function () {//单个选择
     var all_checked = true;
     $('input.cb_item').each(function () {
         if (!$(this).is(':checked')) {
@@ -108,7 +108,7 @@ check_item = function () {//单个选择
     });
     $('#cb_all').attr('checked', all_checked);
 }
-get_admin_by_id = function (id) {//根据id获取管理员信息
+admin_get_admin_by_id = function (id) {//根据id获取管理员信息
     $.ajax({
         type: 'GET',
         url: '/api/Admin/GetAdminById/' + id,
@@ -124,7 +124,7 @@ get_admin_by_id = function (id) {//根据id获取管理员信息
         }
     });
 }
-delete_admins = function (admins) {//删除管理员
+admin_delete_admins = function (admins) {//删除管理员
     var json = JSON.stringify(admins);
     $.ajax({
         type: 'POST',
@@ -137,7 +137,7 @@ delete_admins = function (admins) {//删除管理员
                 if ($('#div_delete').is(':visible')) {
                     $('#div_delete').slideUp();
                 }
-                search_admin($('#txt_search').val());
+                admin_search_admin($('#txt_search').val());
             }
         },
         error: function (msg) {
@@ -145,7 +145,7 @@ delete_admins = function (admins) {//删除管理员
         }
     });
 }
-edit_admin = function (id,admin) {//修改管理员信息
+admin_edit_admin = function (id, admin) {//修改管理员信息
     var json = JSON.stringify(admin);
     $.ajax({
         type: 'PUT',
@@ -158,7 +158,7 @@ edit_admin = function (id,admin) {//修改管理员信息
                 if ($('#div_edit').is(':visible')) {
                     $('#div_edit').slideUp();
                 }
-                search_admin($('#txt_search').val());
+                admin_search_admin($('#txt_search').val());
             }
         },
         error: function (msg) {
@@ -166,7 +166,7 @@ edit_admin = function (id,admin) {//修改管理员信息
         }
     });
 }
-add_admin = function (admin) {//添加管理员
+admin_add_admin = function (admin) {//添加管理员
     var json = JSON.stringify(admin);
     $.ajax({
         type: 'POST',
@@ -179,7 +179,7 @@ add_admin = function (admin) {//添加管理员
                 if ($('#div_add').is(':visible')) {
                     $('#div_add').slideUp();
                 }
-                search_admin($('#txt_search').val());
+                admin_search_admin($('#txt_search').val());
             }
         },
         error: function (msg) {
@@ -187,7 +187,7 @@ add_admin = function (admin) {//添加管理员
         }
     });
 }
-verify_input = function (username, password, $txt_username, $txt_password) {//判断用户输入
+admin_verify_input = function (username, password, $txt_username, $txt_password) {//判断用户输入
     if (username == '') {
         alert('请输入用户名！');
         $txt_username.focus();
@@ -200,10 +200,10 @@ verify_input = function (username, password, $txt_username, $txt_password) {//�
     }
     return true;
 }
-search_admin = function (username) {//搜索管理员
+admin_search_admin = function (username) {//搜索管理员
     $('#table_content').empty();
     $('#table_content').append('<tr>'
-                                    + '<th class="checkbox"><input type="checkbox" name="checkbox" id="cb_all" onclick="check_all(this);" /></th>'
+                                    + '<th class="checkbox"><input type="checkbox" name="checkbox" id="cb_all" onclick="admin_check_all(this);" /></th>'
                                     + '<th>用户名</th>'
                                     + '<th>密码</th>'
                                     + '<th>类型</th>'
@@ -215,7 +215,7 @@ search_admin = function (username) {//搜索管理员
             if (data != null && data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
                     var html = '<tr>'
-                                    + '<td class="checkbox"><input id="' + data[i].id + '" type="checkbox" name="checkbox" class="cb_item" onclick="check_item();" /></td>'
+                                    + '<td class="checkbox"><input id="' + data[i].id + '" type="checkbox" name="checkbox" class="cb_item" onclick="admin_check_item();" /></td>'
                                     + '<td>' + data[i].username + '</td>'
                                     + '<td>' + data[i].password + '</td>'
                                     + '<td>' + data[i].typeId + '</td>'

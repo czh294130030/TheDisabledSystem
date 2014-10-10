@@ -15,6 +15,9 @@
     }
     if (sessionStorage.getItem('user_id') == null) {//判断用户登录，如果没有登录跳转到Login页面
         window.location.href = '/Home/Login';
+    } else {
+        var id = sessionStorage.getItem('user_id');
+        master_get_admin_by_id(id);
     }
     $('#a_logout').click(function () {//登出
         sessionStorage.clear();
@@ -22,3 +25,17 @@
         return false;
     });
 });
+master_get_admin_by_id = function (id) {//根据id获取管理员信息
+    $.ajax({
+        type: 'GET',
+        url: '/api/Admin/GetAdminById/' + id,
+        success: function (data) {
+            if (data != null) {
+                $('#span_username').text(data.username);
+            }
+        },
+        error: function (msg) {
+            alert(msg.responseText);
+        }
+    });
+}
