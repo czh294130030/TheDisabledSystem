@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>残疾人管理系统</title>
     <link href="../../CSS/style.css" rel="stylesheet" />
+    <link href="../../CSS/reset.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-1.7.1.min.js"></script>
     <script src="../../Scripts/Controllers/login.js"></script>
 </head>
@@ -21,20 +22,22 @@
         <div id="desc">
             <div class="body">
                 <div class="col w10 last bottomlast">
-                    <p>
-                        <label for="username">用户名:</label>
-                        <input type="text" name="txt_username" id="txt_username" value="" size="40" class="text" />
-                        <br />
-                    </p>
-                    <p>
-                        <label for="password">密码:</label>
-                        <input type="password" name="txt_password" id="txt_password" value="" size="40" class="text" />
-                        <br />
-                    </p>
-                    <p class="last">
-                        <a id="a_login" href="" class="button form_submit"><small class="icon play"></small><span>登录</span></a>
-                        <br />
-                    </p>
+                    <form>
+                        <p>
+                            <label for="username">用户名:</label>
+                            <input type="text" class="text w_22" name="txt_username" id="txt_username" value="" maxlength="50" />
+                            <br />
+                        </p>
+                        <p>
+                            <label for="password">密码:</label>
+                            <input type="password" class="text w_22" name="txt_password" id="txt_password" value="" maxlength="50" />
+                            <br />
+                        </p>
+                        <p class="last">
+                            <a id="a_login" href="" class="button form_submit"><small class="icon play"></small><span>登录</span></a>
+                            <br />
+                        </p>
+                    </form>
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
