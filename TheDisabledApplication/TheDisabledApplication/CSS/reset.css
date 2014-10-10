@@ -42,8 +42,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .demobg {padding:0 0 20px}
 .demobg .col .content p {background:#f0f0f0;padding:10px}
 .help {
-padding:0 0 20px;
-margin:0 0 40px;
+padding:0 0 0px;
+margin:0 0 10px;
 border-bottom:1px solid #f0f0f0;
 }
 .module .dropdown.help_index {
