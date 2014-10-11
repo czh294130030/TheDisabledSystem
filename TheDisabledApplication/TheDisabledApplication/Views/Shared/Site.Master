@@ -21,7 +21,7 @@
                 </a>
             </div>
             <div class="col w5 last right bottomlast">
-                <p class="last"><span id="span_username" class="strong">Admin</span> <a href="" id="a_logout">登出</a></p>
+                <p class="last" style="margin-right:20px;"><span id="span_username" class="strong">Admin</span>&nbsp;&nbsp;&nbsp;<a href="" id="a_logout">登出</a></p>
             </div>
             <div class="clear"></div>
         </div>
@@ -36,6 +36,7 @@
         <div id="footer">
             <p class="last">Copyright © 2014 - 2018 XX残疾人管理中心. All Rights Reserved</p>
         </div>
+        <div id="loader"></div>
     </form>
 </body>
 </html>

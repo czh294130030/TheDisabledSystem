@@ -39,3 +39,18 @@ master_get_admin_by_id = function (id) {//根据id获取管理员信息
         }
     });
 }
+master_show_loader = function () {//显示滚轮
+    var window_width = $(window).width();
+    var window_height = $(window).height();
+    var left = (window_width - 28) / 2;
+    var top = (window_height - 28) / 2;
+    var modal_loader = '<div class="modal_loader" style="top:' + top + 'px; left: ' + left + 'px; display: block;"></div>';
+    var overlay = '<div class="overlay" style="height: ' + window_height + 'px; display: block;"></div>';
+    $('#loader').append(modal_loader).append(overlay);
+}
+master_hide_loader = function (millisecond) {//删除加载
+    var wait = setInterval(function () {
+        clearInterval(wait);
+        $('#loader').empty();
+    }, millisecond);
+}

@@ -253,6 +253,7 @@
     <Content Include="Scripts\Controllers\login.js" />
     <Content Include="Scripts\Controllers\master.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\modal.js" />
     <Content Include="Views\Home\Admin.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Login.aspx" />
