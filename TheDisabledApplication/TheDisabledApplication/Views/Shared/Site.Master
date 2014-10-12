@@ -21,7 +21,7 @@
                 </a>
             </div>
             <div class="col w5 last right bottomlast">
-                <p class="last" style="margin-right:20px;"><span id="span_username" class="strong">Admin</span>&nbsp;&nbsp;&nbsp;<a href="" id="a_logout">登出</a></p>
+                <p class="last" style="margin-right:20px;"><span id="span_username" class="strong">XXX</span>&nbsp;&nbsp;&nbsp;<a href="" id="a_logout">登出</a></p>
             </div>
             <div class="clear"></div>
         </div>
