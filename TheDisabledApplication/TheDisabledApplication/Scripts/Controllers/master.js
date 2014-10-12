@@ -13,32 +13,19 @@
             }, 300);
         }
     }
-    if (sessionStorage.getItem('user_id') == null) {//判断用户登录，如果没有登录跳转到Login页面
+    if (sessionStorage.getItem('id') == null) {//判断用户登录，如果没有登录跳转到Login页面
         window.location.href = '/Home/Login';
     } else {
-        var id = sessionStorage.getItem('user_id');
-        master_get_admin_by_id(id);
+        var username = sessionStorage.getItem('username');
+        $('#span_username').text(username);
     }
     $('#a_logout').click(function () {//登出
-        sessionStorage.clear();
+        sessionStorage.removeItem('id');
+        sessionStorage.removeItem('username');
         window.location.href = '/Home/Login';
         return false;
     });
 });
-master_get_admin_by_id = function (id) {//根据id获取管理员信息
-    $.ajax({
-        type: 'GET',
-        url: '/api/Admin/GetAdminById/' + id,
-        success: function (data) {
-            if (data != null) {
-                $('#span_username').text(data.username);
-            }
-        },
-        error: function (msg) {
-            alert(msg.responseText);
-        }
-    });
-}
 master_show_loader = function () {//显示滚轮
     var window_width = $(window).width();
     var window_height = $(window).height();

@@ -28,8 +28,9 @@ user_login = function (username, password) {//用户登录
         type: 'GET',
         url: '/api/Admin/GetAdmin?username='+username+'&password='+password,
         success: function (data) {
-            if (data != null && data.id > 0) {//登录成功后见用户编号保存到sessionStorage并跳转到Index页面
-                sessionStorage.setItem('user_id', data.id);
+            if (data != null && data.id > 0) {//登录成功后见用户编号，用户名保存到sessionStorage并跳转到Index页面
+                sessionStorage.setItem('id', data.id);
+                sessionStorage.setItem('username', data.username);
                 window.location.href = '/Home/Index';
             } else {
                 alert('用户名或密码错误！');
