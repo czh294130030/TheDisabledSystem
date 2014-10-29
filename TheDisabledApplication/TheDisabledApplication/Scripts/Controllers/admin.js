@@ -201,7 +201,6 @@ admin_verify_input = function (username, password, $txt_username, $txt_password)
     return true;
 }
 admin_search_admin = function (username) {//搜索管理员
-    master_show_loader();
     $('#table_content').empty();
     $('#table_content').append('<tr>'
                                     + '<th class="checkbox"><input type="checkbox" name="checkbox" id="cb_all" onclick="admin_check_all(this);" /></th>'
@@ -213,7 +212,6 @@ admin_search_admin = function (username) {//搜索管理员
         type: 'GET',
         url: '/api/Admin/GetAdmins?username=' + username + '&typeId=2',
         success: function (data) {
-            master_hide_loader(500);
             if (data != null && data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
                     var html = '<tr>'
@@ -227,8 +225,13 @@ admin_search_admin = function (username) {//搜索管理员
             }
         },
         error: function (msg) {
-            master_hide_loader(0);
             alert(msg.responseText);
+        },
+        beforeSend: function () {
+            master_show_loader();
+        },
+        complete: function () {
+            master_hide_loader();
         }
     });
 }
